@@ -1,0 +1,110 @@
+body {
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #ffebcd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  background-color: #87ceeb;
+  border: 2px solid #4682b4;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.square:hover {
+  background-color: #00bfff;
+  transform: scale(1.1);
+}
+
+.winning-square {
+  background-color: lightgreen;
+  color: white;
+  animation: winning-glow 1s infinite alternate;
+}
+
+@keyframes winning-glow {
+  from {
+    box-shadow: 0 0 10px #ff4500;
+  }
+  to {
+    box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500;
+  }
+}
+
+button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+}
+
+.game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game-info ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.game-info ol li {
+  margin-bottom: 10px;
+}
+
+button.sort-toggle {
+  background-color: #32cd32;
+  margin-bottom: 20px;
+}
+
+button.sort-toggle:hover {
+  background-color: #228b22;
+}
